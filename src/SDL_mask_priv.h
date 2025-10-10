@@ -22,14 +22,14 @@ static inline void create_masked_surface(
 			Uint32 imgpi = y * img_pitch + x;
 			Uint32 maskpi = y * mask_pitch + x;
 			Uint32 maskp = mask_pixels[maskpi];
-			Uint32 imgp = img_pixels[imgpi];
+			// Uint32 imgp = img_pixels[imgpi];
 			SDL_Color col;
 			SDL_GetRGBA(maskp, mask->format, &col.r, &col.g, &col.b, &col.a);
 			if (
 				col.r == mask_col.r && col.g == mask_col.g &&
 				col.b == mask_col.b && col.a == mask_col.a)
 			{
-				SDL_GetRGBA(imgp, img->format, &col.r, &col.g, &col.b, &col.a);
+				// SDL_GetRGBA(imgp, img->format, &col.r, &col.g, &col.b, &col.a);
 				Uint32 newp = SDL_MapRGBA(
 					img->format,
 					target_col.r,
