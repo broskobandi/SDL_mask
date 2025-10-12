@@ -9,6 +9,13 @@ int main(void) {
 	assert(img);
 	SDL_Surface *mask = IMG_Load("../mask_test.png");
 	assert(mask);
+	SDL_Surface *tmp = SDL_ConvertSurfaceFormat(img, SDL_PIXELFORMAT_RGBA8888, 0);
+	assert(tmp);
+	img = tmp;
+	tmp = SDL_ConvertSurfaceFormat(mask, SDL_PIXELFORMAT_RGBA8888, 0);
+	assert(tmp);
+	mask = tmp;
+	assert(mask->format == img->format);
 
 	SDL_Color mask_col = {0, 0, 0, 0};
 	SDL_Color target_col = {0, 0, 0, 0};

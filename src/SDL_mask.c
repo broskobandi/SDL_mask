@@ -45,6 +45,7 @@ SDL_Texture *SDL_CreateMaskedTexture(
 	SDL_Color mask_col,
 	SDL_Color target_col)
 {
+	printf("segg\n");
 	if (!path_to_img || !path_to_mask) {
 		g_err = "Invalid input.";
 		return NULL;

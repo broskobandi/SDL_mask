@@ -18,7 +18,7 @@ find_package(SDL2_image REQUIRED)
 # Targets
 add_library("${LIB_SO}" SHARED "${SRC}")
 add_library("${LIB_A}" STATIC "${SRC}")
-add_executable(test EXCLUDE_FROM_ALL "${TEST_MAIN}")
+add_executable(test EXCLUDE_FROM_ALL "${TEST_MAIN}" "${SRC}")
 add_executable(example EXCLUDE_FROM_ALL "${EXAMPLE_MAIN}")
 
 # Target options
