@@ -1,5 +1,25 @@
 # SDL_mask
 A tool to manipulate surface pixels using masks.
+## Prerequisites
+- cmake (for building the library)
+- SDL2
+- [ctest](https://github.com/broskobandi/ctest.git) (for running the tests)
+## Installation
+```bash
+git clone https://github.com/broskobandi/SDL_mask.git &&
+cd SDL_mask &&
+mkdir build &&
+cd build &&
+cmake .. &&
+make &&
+sudo make install
+```
+## Testing
+```bash
+cd SDL_mask/build &&
+make test &&
+./test
+```
 ## Usage
 ```c
 /* Include the library. */
