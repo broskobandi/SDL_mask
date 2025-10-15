@@ -32,6 +32,10 @@ SOFTWARE.
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Creates a masked texture.
  * \param ren Renderer to be used for creating the new texture.
  * \param path_to_img Path to the image file to be masked (png).
@@ -50,5 +54,9 @@ SDL_Texture *SDL_CreateMaskedTexture(
 /** Returns a string containing the latest error information if
  * exists or NULL. */
 const char *SDL_MaskGetError();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
